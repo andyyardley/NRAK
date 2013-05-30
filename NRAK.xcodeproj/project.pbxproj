@@ -10,6 +10,9 @@
 		A14EC8311757249E002379C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14EC8301757249E002379C8 /* Foundation.framework */; };
 		A14EC8361757249E002379C8 /* NRAK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A14EC8351757249E002379C8 /* NRAK.h */; };
 		A14EC8381757249E002379C8 /* NRAK.m in Sources */ = {isa = PBXBuildFile; fileRef = A14EC8371757249E002379C8 /* NRAK.m */; };
+		A14EC84B17573185002379C8 /* NRAKServices.m in Sources */ = {isa = PBXBuildFile; fileRef = A14EC84A17573185002379C8 /* NRAKServices.m */; };
+		A14EC84E175731B0002379C8 /* NSObject+NRAKBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A14EC84D175731B0002379C8 /* NSObject+NRAKBaseModel.m */; };
+		A14EC858175732BA002379C8 /* NRAKBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = A14EC857175732BA002379C8 /* NRAKBaseService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +34,15 @@
 		A14EC8341757249E002379C8 /* NRAK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRAK-Prefix.pch"; sourceTree = "<group>"; };
 		A14EC8351757249E002379C8 /* NRAK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRAK.h; sourceTree = "<group>"; };
 		A14EC8371757249E002379C8 /* NRAK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRAK.m; sourceTree = "<group>"; };
+		A14EC84917573185002379C8 /* NRAKServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRAKServices.h; sourceTree = "<group>"; };
+		A14EC84A17573185002379C8 /* NRAKServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRAKServices.m; sourceTree = "<group>"; };
+		A14EC84C175731B0002379C8 /* NSObject+NRAKBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NRAKBaseModel.h"; sourceTree = "<group>"; };
+		A14EC84D175731B0002379C8 /* NSObject+NRAKBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NRAKBaseModel.m"; sourceTree = "<group>"; };
+		A14EC850175731DC002379C8 /* NRAKCaching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRAKCaching.h; sourceTree = "<group>"; };
+		A14EC85117573222002379C8 /* NRAKCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRAKCategories.h; sourceTree = "<group>"; };
+		A14EC8521757322C002379C8 /* NRAKModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRAKModels.h; sourceTree = "<group>"; };
+		A14EC856175732BA002379C8 /* NRAKBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRAKBaseService.h; sourceTree = "<group>"; };
+		A14EC857175732BA002379C8 /* NRAKBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRAKBaseService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,7 @@
 		A14EC8321757249E002379C8 /* NRAK */ = {
 			isa = PBXGroup;
 			children = (
+				A14EC8441757316C002379C8 /* Source */,
 				A14EC8351757249E002379C8 /* NRAK.h */,
 				A14EC8371757249E002379C8 /* NRAK.m */,
 				A14EC8331757249E002379C8 /* Supporting Files */,
@@ -86,6 +99,86 @@
 				A14EC8341757249E002379C8 /* NRAK-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A14EC8441757316C002379C8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A14EC8451757316C002379C8 /* Categories */,
+				A14EC8461757316C002379C8 /* Models */,
+				A14EC8471757316C002379C8 /* Services */,
+				A14EC8481757316C002379C8 /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A14EC8451757316C002379C8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A14EC84C175731B0002379C8 /* NSObject+NRAKBaseModel.h */,
+				A14EC84D175731B0002379C8 /* NSObject+NRAKBaseModel.m */,
+				A14EC85117573222002379C8 /* NRAKCategories.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A14EC8461757316C002379C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A14EC84F175731BE002379C8 /* Protocols */,
+				A14EC8521757322C002379C8 /* NRAKModels.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A14EC8471757316C002379C8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A14EC85517573256002379C8 /* Protocols */,
+				A14EC8541757323E002379C8 /* Network */,
+				A14EC85317573234002379C8 /* Cache */,
+				A14EC84917573185002379C8 /* NRAKServices.h */,
+				A14EC84A17573185002379C8 /* NRAKServices.m */,
+				A14EC856175732BA002379C8 /* NRAKBaseService.h */,
+				A14EC857175732BA002379C8 /* NRAKBaseService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A14EC8481757316C002379C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A14EC84F175731BE002379C8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A14EC850175731DC002379C8 /* NRAKCaching.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		A14EC85317573234002379C8 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		A14EC8541757323E002379C8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		A14EC85517573256002379C8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14EC8381757249E002379C8 /* NRAK.m in Sources */,
+				A14EC84B17573185002379C8 /* NRAKServices.m in Sources */,
+				A14EC84E175731B0002379C8 /* NSObject+NRAKBaseModel.m in Sources */,
+				A14EC858175732BA002379C8 /* NRAKBaseService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +266,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -193,7 +289,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -205,8 +301,10 @@
 				DSTROOT = /tmp/NRAK.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NRAK/NRAK-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${PRODUCT_NAME}";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -219,6 +317,7 @@
 				GCC_PREFIX_HEADER = "NRAK/NRAK-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${PRODUCT_NAME}";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -242,6 +341,7 @@
 				A14EC83D1757249E002379C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
